@@ -28,7 +28,7 @@ RUN .$HOME\scoop\apps\win32-openssh\current\FixHostFilePermissions.ps1 -Confirm:
 
 RUN Enable-PSRemoting
 
-EXPOSE 1222/tcp 55985/tcp 55986/tcp
+EXPOSE 1322/tcp 55985/tcp 55986/tcp
 
 RUN net USER user "Passw0rd" /ADD ; net localgroup "Administrators" "user" /ADD
 

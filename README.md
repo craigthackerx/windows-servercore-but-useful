@@ -38,11 +38,11 @@ ADD authorized_keys C:\Users\ContainerAdministration\.ssh\authorized_keys
 ```
 Then:
 ```
-docker run -it --rm -m=8GB --cpus=4 -p 1222:22/tcp craigtho/windows-servercore-but-useful:latest
+docker run -it --rm -m=8GB --cpus=4 -p 1322:22/tcp craigtho/windows-servercore-but-useful:latest
 ```
  And then:
 `Username=user`
-`Password=Hell0wo0rld`
+`Password=Passw0rd`
 
  ```ssh -p 1222 user@127.0.0.1```
 
