@@ -14,8 +14,8 @@ Try {
     sed -i 's;#PubkeyAuthentication yes;PubkeyAuthentication yes;g' $HOME\scoop\apps\win32-openssh\current\sshd_config_default ; `
     sed -i 's;#PermitEmptyPasswords no;PermitEmptyPasswords yes;g' $HOME\scoop\apps\win32-openssh\current\sshd_config_default ; `
 
-    Get-Service *ssh* | Start-Service ; `
-    Set-Service -Name ssh-agent -StartupType Automatic ; Set-Service -Name sshd -StartupType Automatic
+    # Get-Service *ssh* | Start-Service ; `
+    # Set-Service -Name ssh-agent -StartupType Automatic ; Set-Service -Name sshd -StartupType Automatic
     }
 
     Catch {

@@ -1,0 +1,18 @@
+version: '2.4'
+services:
+
+  craigtho-portainer:
+    container_name: craigtho-portainer
+    restart: unless-stopped
+    image: craigtho/windows-portainer
+    mem_limit: 1024m
+    cpu_count: 1
+    ports:
+      - "3222:22/tcp"
+      - "9443:9000/tcp"
+      - "10000:8000/tcp"
+    volumes:
+      - source: \\.\pipe\docker_engine
+        target: \\.\pipe\docker_engine
+        type: npipe
+      - C:\ProgramData\Portainer:C:\data
