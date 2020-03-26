@@ -1,0 +1,15 @@
+version: '2.4' # Needed for resource allocation
+services:
+
+  windows-servercore-but-useful:
+    build: ./windows-servercore-but-useful/main
+    image: "windows-servercore-but-useful"
+    mem_limit: 8192m
+    cpu_count: 4
+    container_name: windows-servercore-but-useful
+    restart: unless-stopped
+    stdin_open: true
+    ports:
+     - "1322:22/tcp" #Expose SSH to a non-standard
+     - "55987:5985/tcp" #PSRemoting HTTP Port
+     - "55988:5986/tcp" #PSRemoting HTTPS Port
